@@ -7,6 +7,11 @@ const userSchema = new mongoose.Schema(
       min: 3,
       max: 20,
     },
+    name: {
+      type: String,
+      min: 3,
+      max: 20,
+    },
     email: {
       type: String,
       max: 50,
@@ -16,10 +21,10 @@ const userSchema = new mongoose.Schema(
       min: 8,
     },
     googleId: {
-        type: String,
-        required: true,
-        min: 8,
-      },
+      type: String,
+      required: true,
+      min: 8,
+    },
   },
   {
     timestamps: true,

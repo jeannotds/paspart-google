@@ -17,12 +17,27 @@ app.use(
   })
 );
 
+// app.use(function(request, response, next) {
+//   if (request.session && !request.session.regenerate) {
+//       request.session.regenerate = (cb) => {
+//           cb()
+//       }
+//   }
+//   if (request.session && !request.session.save) {
+//       request.session.save = (cb) => {
+//           cb()
+//       }
+//   }
+//   next()
+// })
+
 app.use(passport.initialize());
 app.use(passport.session());
 
 app.use(
   cors({
-    origin: "http://localhost:3000/",
+    // origin: "http://localhost:3000/",
+    origin: "*",
     method: "GET,POST,PUT,PATCH,DELETE",
     credentials: true,
   })
