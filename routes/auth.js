@@ -32,5 +32,5 @@ router.get("/logout", (req, res) => {
 });
 
 // app.get('/auth/google', passport.authenticate('google', { scope: ['profile'] }));
-
+// cosnt
 module.exports = router;
